@@ -135,11 +135,12 @@ AuraSkillBuffer* MakeAuraSkillBuffer(Unit* unit) {
     AuraSkillBuffer* auraBuffer = gAuraSkillBuffer;
     int count = 0;
     int distance = 0;
+	u8 unitIndex = unit->index;
 
     for (int i = 0; i < 0x100; ++i) {
         Unit* other = gUnitLookup[i];
 
-        if (!IsUnitOnField(other) || unit->index == i) {
+        if (!IsUnitOnField(other) || unitIndex == i) {
             continue;
         }
 
@@ -267,11 +268,12 @@ u8* GetUnitsInRange(Unit* unit, int allyOption, int range) {
 
     int count = 0;
     int check = 0;
+	u8 unitIndex = unit->index;
 
     for (int i = 0; i < 0x100; ++i) {
         Unit* other = gUnitLookup[i];
 
-        if (!IsUnitOnField(other) || unit->index == i) {
+        if (!IsUnitOnField(other) || unitIndex == i) {
             continue;
         }
 
