@@ -496,7 +496,7 @@
 
 //Pursuit: When under attack, attack speed +2.
 //Author Unknown (Initial Commit)
-#define PursuitID 177
+#define PursuitID 255
 
 //Chivalry: When foe is at full HP, attack and def/res +2.
 //Author Unknown (Initial Commit)
@@ -1051,7 +1051,7 @@
 
 // Advantage Chaser: Unit always doubles when attacking with WTA.
 // By Jopettajah
-#define AdvantageChaserID 255
+#define AdvantageChaserID 177
 
 //Stat Modifier Skills
 
