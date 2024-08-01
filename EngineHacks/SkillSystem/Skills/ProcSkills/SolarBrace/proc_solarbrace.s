@@ -32,10 +32,10 @@ cmp r0, #0
 beq End
 
 @skip if unit isn't the attacker
-mov 	r0, r4
-ldr     r2,=0x203a4ec @attacker
-cmp     r0,r2
-bne     End
+// mov 	r0, r4
+// ldr     r2,=0x203a4ec @attacker
+// cmp     r0,r2
+// bne     End
 
 
 
@@ -43,7 +43,7 @@ bne     End
 ldr     r2,[r6]    
 lsl     r1,r2,#0xD                @ 0802B42C 0351     
 lsr     r1,r1,#0xD                @ 0802B42E 0B49     
-mov     r0, #0x41
+mov     r0, #0x1
 lsl     r0, #8           @0x4100, attacker skill activated and hp draining
 orr     r1, r0
 ldr     r0,=0xFFF80000                @ 0802B434 4804     
@@ -51,8 +51,8 @@ and     r0,r2                @ 0802B436 4010
 orr     r0,r1                @ 0802B438 4308     
 str     r0,[r6]                @ 0802B43A 6018  
 
-ldrb  r0, SolarBraceID
-strb  r0, [r6,#4]
+// ldrb  r0, SolarBraceID
+// strb  r0, [r6,#4]
 
 @check liquid ooze
 mov	r0,r5
