@@ -4,9 +4,9 @@
 #include "_Common.event"
 
 pMagicModifiers: // Magic
-	POIN prAddUnitMagic HalfMagFunc prAddEquipMagic 
+	POIN prAddUnitMagic HalfMagFunc 
 	POIN prDebuffMag 
-	POIN prRallyMag prSkillFury prFortressDefensePow prFortressResistancePow prItemPassiveMag VigorDanceCheck prLifeAndDeathBonus prDefiantMag prPushMag
+	POIN prRallyMag prSkillFury prFortressDefensePow prFortressResistancePow prItemPassiveMag VigorDanceCheck prLifeAndDeathBonus prDefiantMag prPushMag prDefenderBonus prMagicBonus
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -15,8 +15,6 @@ WORD 0 // Many of these are recycled from Power.event.
 prAddUnitMagic:
 	rAdd(rSByteAt(UNIT_MAGIC))
 
-prAddEquipMagic:
-	rAdd(rForUnitEquipped(rCallExternal(prGetItemMagBonus)))
 
 
 

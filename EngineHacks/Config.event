@@ -258,7 +258,7 @@
 #define DEBUFFS_MIN_ZERO
 
 // If true Shadowgift/Lumina will check for staff ranks when checking for highest magic rank
-#define SHADOWGIFT_VIA_STAFF_RANK False
+#define SHADOWGIFT_VIA_STAFF_RANK True
 #define LUMINA_VIA_STAFF_RANK True
 
 // If commented, Poison Strike and Grisly Wound will not check whether no damage was dealt before applying additional damage.

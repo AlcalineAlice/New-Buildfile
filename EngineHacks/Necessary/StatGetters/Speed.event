@@ -6,7 +6,7 @@
 pSpeedModifiers: // Speed
 	POIN prAddUnitSpeed prHalveIfRescuing prHalveIfCapturing 
 	POIN prDebuffSpd 
-	POIN prAddEquipSpeed prItemPassiveSpeed prRallySpd prLifeAndDeathBonus prSkillFury prResolve prDefiantSpd prPushSpd
+	POIN prItemPassiveSpeed prRallySpd prLifeAndDeathBonus prSkillFury prResolve prDefiantSpd prPushSpd prDefenderBonus prSpeedBonus 
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -15,8 +15,7 @@ WORD 0
 prAddUnitSpeed:
 	rAdd(rSByteAt(UNIT_SPEED))
 
-prAddEquipSpeed:
-	rAdd(rForUnitEquipped(rCallExternal(prGetItemSpdBonus)))
+
 
 prItemPassiveSpeed:
 #ifndef DONT_STACK_BOOSTS

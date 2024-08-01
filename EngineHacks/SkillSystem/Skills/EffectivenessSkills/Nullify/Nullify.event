@@ -71,6 +71,14 @@
 	#include "Redone_Effectiveness.lyn.event"
 	POIN SkillTester
 	WORD NullifyID
+	WORD WingedShieldID
+	WORD ArmorShieldID
+	WORD HorseShieldID
+	WORD DragonShieldID
+	POIN FlierEffectiveness
+	POIN ArmorEffectiveness
+	POIN HorseEffectiveness
+	POIN DragonEffectiveness
 
 	ALIGN 4
 	Redone_Redone_Slayer:
@@ -78,7 +86,7 @@
 	POIN SkillTester
 	WORD SlayerID
 	WORD NullifyID
-	WORD MonsterType
+	WORD DragonType // WORD MonsterType
 	WORD SkybreakerID
 	WORD FlierType
 	WORD ResourcefulID

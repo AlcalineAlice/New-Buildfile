@@ -1110,18 +1110,6 @@ ORG SkillIcon(LadyBladeID)
 ORG SkillIcon(HighGroundID)
 #incbin "SkillIcons/HighGround.dmp"
 
-ORG SkillIcon(NoGuardID)
-#incbin "SkillIcons/Acrobat.dmp"
-
-ORG SkillIcon(NoGuardID)
-#incbin "SkillIcons/Acrobat.dmp"
-ORG SkillIcon(SpeedBoostID)
-#incbin "SkillIcons/Acrobat.dmp"
-ORG SkillIcon(WonderGuardID)
-#incbin "SkillIcons/Acrobat.dmp"
-ORG SkillIcon(AnalyticID)
-#incbin "SkillIcons/Acrobat.dmp"
-
 ORG SkillIcon(SolarBraceID)
 #incbin "SkillIcons/SolarBrace.dmp"
 

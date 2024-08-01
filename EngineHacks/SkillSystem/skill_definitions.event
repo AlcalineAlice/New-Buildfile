@@ -14,7 +14,7 @@
 
 //Shade+: Enemies will not target this unit.
 //By Sme
-#define ShadePlusID 45
+#define ShadePlusID 255
 
 
 //Aura Skills
@@ -25,7 +25,7 @@
 
 //Blood Tide: Atk and Hit +5 to adjacent allies.
 //By Sme
-#define BloodTideID 255
+#define BloodTideID 64
 
 //Charisma: Grants +10 Hit/Avoid to all allies within three tiles.
 //By Darrman
@@ -73,7 +73,7 @@
 
 //Divinely Inspiring: Adjacent allies deal +3 damage and receive -1 damage.
 //By Dragz
-#define DivinelyInspiringID 255
+#define DivinelyInspiringID 65
 
 //Intimidate: -10 Avoid to all enemies within 2 tiles.
 //Author Unknown (Initial Commit)
@@ -89,7 +89,7 @@
 
 //Night Tide: Def and Res +5 to adjacent allies.
 //By Sme
-#define NightTideID 255
+#define NightTideID 66
 
 //Solidarity: Critical and Critical Avoid +10 to adjacent allies.
 //By SD9k
@@ -117,20 +117,24 @@
 
 //White Pool: Atk and AS +5 to adjacent allies.
 //By Sme
-#define WhitePoolID 255
+#define WhitePoolID 67
 
 //Skyguard: +4 defense against flying enemies if within 3 spaces of an ally flier.
 //By Sme
-#define SkyguardID 158
+#define SkyguardID 255
 
 //Horseguard: +4 defense against horseback enemies if within 3 spaces of an ally horse rider.
 //By Sme
-#define HorseguardID 157
+#define HorseguardID 255
 
 //Armorboost: +4 attack and defense against armored enemies if within 3 spaces of an armored ally.
 //By Sme
-#define ArmorboostID 156
+#define ArmorboostID 255
 #define ArmorBoostID ArmorboostID //Alias\
+
+//RallyingCry: Allies deal +2 damage and enemies deal -2 damage in a 4 tile radius of the user.
+//By Jester
+#define RallyingCryID 255
 
 
 // Turn Skills
@@ -141,7 +145,7 @@
 
 //Hoarder's Bane: At the end of your turn, consume a vulnerary from the supply if below full health.
 // Author: Vesly 
-#define HoardersBaneID 255
+#define HoardersBaneID 68
 
 // Dark Bargain: At the end of your turn, sacrifice extra exp to heal by that much.
 // Author: Vesly 
@@ -158,14 +162,14 @@
 
 // _ Taker: After attacking and defeating an enemy, gain +4 _. (Max +10) 
 // Author: Vesly 
-#define StrTakerID 255
-#define SklTakerID 255 
-#define SpdTakerID 255 
-#define DefTakerID 255 
-#define ResTakerID 255 
-#define LukTakerID 255 
-#define MagTakerID 255 
-#define MovTakerID 255 
+#define StrTakerID 69
+#define SklTakerID 95
+#define SpdTakerID 97
+#define DefTakerID 98
+#define ResTakerID 113
+#define LukTakerID 131
+#define MagTakerID 49
+#define MovTakerID 50
 
 // Hone _ : At the start of your turn, give adjacent allies up to +3 _. 
 // Author: Vesly 
@@ -244,32 +248,48 @@
 
 //Slayer: Deal effective damage to monster units.
 //By Tequila
-#define SlayerID 7
+#define SlayerID 255
 
 //Skybreaker: Deal effective damage to flying units.
 //By Sme
-#define SkybreakerID 47
+#define SkybreakerID 255
+
+//WingedShield: Prevent effective damage against flying units
+#define WingedShieldID 156
+
+//ArmorShield: Prevent effective damage against armored units
+#define ArmorShieldID 157
+
+//HorseShield: Prevent effective damage against mounted units
+#define HorseShieldID 158
+
+//DragonShield: Prevent effective damage against dragon units
+#define DragonShieldID 132
 
 //Resourceful: Double effectiveness multiplier.
 //By Sme
-#define ResourcefulID 48
+#define ResourcefulID 255
 
 
 //EXP Skills
 
 //Paragon: Experience gain is doubled.
 //Author Unknown (Initial Commit)
-#define ParagonID 49
+#define ParagonID 255
+
+//Veteran: Experience gain is x1.5.
+//By Snerdels
+#define VeteranID 255
 
 //Void Curse: This unit gives no experience when defeated.
 //By Sme
-#define VoidCurseID 50
+#define VoidCurseID 255
 
 //Growth Skills
 
 //Blossom: 2x growth rates, but 1/2 exp gain.
 //By Sme
-#define BlossomID 52
+#define BlossomID 255
 
 //Aptitude: +20% to all growth rates.
 //By Sme
@@ -280,37 +300,41 @@
 
 //Renewal: Restore 30% of max HP at the start of each turn.
 //Author Unknown (Initial Commit)
-#define RenewalID 87
+#define RenewalID 255
 
 //Amaterasu: Allies within 2 tiles recover 20% HP each turn.
 //Author Unknown (Initial Commit)
-#define AmaterasuID 93
+#define AmaterasuID 255
 
 //Camaraderie: Recover 10% HP each turn if there are allies within 2 tiles.
 //Author Unknown (Initial Commit)
-#define CamaraderieID 89
+#define CamaraderieID 255
 
 //Relief: Recover 20% HP each turn if there are no allies within 2 tiles.
 //Author Unknown (Initial Commit)
-#define ReliefID 90
+#define ReliefID 255
 
 //Bond: All allies within 3 tiles recover 10% HP each turn.
 //Author Unknown (Initial Commit)
-#define BondID 92
+#define BondID 255
 
 //Forager: Recover 20% HP each turn if on a Plain, Forest or Mountain.
 //By Leonarth
-#define ForagerID 91
+#define ForagerID 255
 
 //Imbue: Recover HP equal to Magic at the start of each turn.
 //By Sme
-#define ImbueID 88
+#define ImbueID 255
+
+//Circlet: Grants both the effects of Miracle and Renewal
+//By Jester
+#define CircletID 255
 
 //Movement Skills
 
 //Acrobat: All traversable terrain costs 1 movement.
 //By Tequila
-#define AcrobatID 53
+#define AcrobatID 255
 
 //Armor March: At start of turn, if unit is adjacent to an armor ally, unit and adjacent armor allies gain +2 Mov.
 //By Leonarth
@@ -326,30 +350,30 @@
 
 //Indoor March: At start of turn, if unit is on indoor terrain, unit gains +2 Mov.
 //By Sme
-#define IndoorMarchID 147
+#define IndoorMarchID 255
 
 //Nature Rush: At start of turn, if unit is on natural terrain, unit gains +2 Mov.
 //By Sme
-#define NatureRushID 146
+#define NatureRushID 255
 
 
 //Mug-Loading Skills
 
 //Quantum Visage: Face changes every time it's looked at.
 //By Leonarth
-#define RandomMugID 130
+#define RandomMugID 255
 
 
 //Identity Problems: This unit can't decide on a name or face.
 //By Leonarth
-#define IdentityProblemsID 129
+#define IdentityProblemsID 255
 
 
 //Post-Battle Skills
 
 //Breath of Life: After attacking,allies in 2 tiles heal of 20% max HP.
 //By circleseverywhere
-#define BreathOfLifeID 123
+#define BreathOfLifeID 255
 
 //Canto: Can move again after certain actions.
 //By Tequila
@@ -369,11 +393,11 @@
 
 //Galeforce: Move again after attacking and defeating an enemy.
 //Author Unknown (Initial Commit)
-#define GaleforceID 117
+#define GaleforceID 255
 
 //Fail 'n Gale: Move again after attacking but failing to harm an enemy. 
 //By Vesly 
-#define FailGaleID 255 
+#define FailGaleID 117
 
 //Lifetaker: Restore up to 25% HP after attacking and defeating an enemy.
 //Author Unknown (Initial Commit)
@@ -393,7 +417,7 @@
 
 //Re-Move: Luck% chance to get another action at end of turn.
 //By Sme
-#define ReMoveID 119
+#define ReMoveID 255
 
 //Savage Blow: After attacking, enemies within 2 tiles take 20% damage.
 //By circleseverywhere
@@ -401,26 +425,14 @@
 
 //Cultured: If unit attacks next to a unit with Nice Thighs, move again. -50 hit against units with Nice Thighs.
 //By Sme
-#define CulturedID 121
+#define CulturedID 255
 
 //Gridmaster: Movement skills do not end your action.
 //By Sme
-#define GridmasterID 120
+#define GridmasterID 255
 
 
 //Pre-Battle Skills
-
-//No Guard: Both sides have a 100% hit rate.
-//By Jester
-#define NoGuardID 255
-
-//Wonder Guard: Cannot be damaged by the same weapon type (e.g. sword vs sword)
-//By Jester
-#define WonderGuardID 255
-
-//Analytic: +10 attack if speed is less than opponent's by 4 points or more. If between 1-3 points, then +5 attack.
-//By Jester
-#define AnalyticID 255
 
 //Axefaith: Axes can't lose durability, and grants +Luck*1.5 Hit when wielding axes.
 //By 2WB & Colorz
@@ -429,7 +441,7 @@
 
 //Battle Veteran: Gain +1 damage and +5% Hit per 10 levels unit has.
 //By Datagne
-#define BattleVeteranID 166
+#define BattleVeteranID 255
 
 //Blow Skills: Apply a stat bonus when initiating battle.
 //By Rossendale
@@ -440,7 +452,7 @@
 #define CertainBlowID 238
 #define ArmoredBlowID 237
 //By Darrman
-#define HeroesDeathBlowID 255
+#define HeroesDeathBlowID 166
 
 //Breaker Skills:  +50 Hit/Avo when enemy has the specified weapon type equipped.
 //By Rossendale
@@ -449,6 +461,9 @@
 #define AxebreakerID 192
 #define BowbreakerID 193
 #define TomebreakerID 194
+#define StaffbreakerID 255
+#define LightbreakerID 120
+#define DarkbreakerID 121
 
 //Charge: Gain +1 damage for every two squares moved.
 //By Datagne
@@ -456,7 +471,7 @@
 
 //Charge+: Charge+: If unit has used up all movement, gain brave effect.
 //By Sme
-#define ChargePlusID 168
+#define ChargePlusID 255
 
 //Critical Force: Base critical is Skl * 1.5.
 //Author Unknown (Initial Commit)
@@ -464,7 +479,7 @@
 
 //Killing Machine: Total critical rate is doubled.
 //Author Unknown (Initial Commit)
-#define KillingMachineID 172
+#define KillingMachineID 255
 
 //Crit Boost: +15 critical rate.
 //Author Unknown (Initial Commit)
@@ -477,7 +492,7 @@
 
 //Patience: When under attack, avoid +10.
 //Author Unknown (Initial Commit)
-#define PatienceID 255
+#define PatienceID 168
 
 //Pursuit: When under attack, attack speed +2.
 //Author Unknown (Initial Commit)
@@ -489,7 +504,7 @@
 
 //Pragmatic: When foe is not at full HP, attack +3 and def/res+1.
 //Author Unknown (Initial Commit)
-#define PragmaticID 227
+#define PragmaticID 226
 
 //Defiant Avoid/Crit: When HP is 25% or lower, gain +30 Avoid or Crit.
 //By Sme
@@ -498,12 +513,12 @@
 
 //Indoor/Outdoor Fighter: +10 Hit and Avo when fighting indoors/outdoors.
 //By Sme
-#define IndoorFighterID 217
-#define OutdoorFighterID 218
+#define IndoorFighterID 255
+#define OutdoorFighterID 255
 
 //Elbow Room: +3 damage dealt when on open terrain.
 //Author Unknown (Initial Commit)
-#define ElbowRoomID 214
+#define ElbowRoomID 255
 
 //Even/Odd Rhythm: +10 Hit and Avoid on even or odd numbered turns.
 //Author Unknown (Initial Commit)
@@ -517,6 +532,9 @@
 #define AxefaireID 197
 #define BowfaireID 198
 #define TomefaireID 199
+#define StafffaireID 255
+#define LightfaireID 217
+#define DarkfaireID 218
 
 //Fiery Blood: +4 damage when HP is not at max.
 //Author Unknown (Initial Commit)
@@ -524,7 +542,7 @@
 
 //Foreign Princess: Foreign army units take -2/+2 damage dealt/taken.
 //By Sme
-#define ForeignPrincessID 255
+#define ForeignPrincessID 214
 
 //Fortune: This unit cannot be crit.
 //By Sme
@@ -536,7 +554,7 @@
 
 //Hawkeye: User will always hit the enemy.
 //By SD9k
-#define HawkeyeID 221
+#define HawkeyeID 135
 
 //Heavy Strikes: Add weapon weight to critical chance.
 //By Datagne
@@ -548,7 +566,7 @@
 
 //Insight: Hit +20.
 //By Sme
-#define InsightID 255
+#define InsightID 245
 
 //Knight Aspirant: When above 75% health, +2 damage, +15% avoid.
 //By Datagne
@@ -556,7 +574,7 @@
 
 //Life and Death: +10 to damage dealt and taken.
 //Author Unknown (Initial Commit)
-#define LifeAndDeathID 255
+#define LifeAndDeathID 221
 
 //Light Weight: When holding three or less items, attack speed +3.
 //Author Unknown (Initial Commit)
@@ -576,7 +594,7 @@
 
 //Natural Cover: -3 damage taken when on terrain with effects.
 //Author Unknown (Initial Commit)
-#define NaturalCoverID 224
+#define NaturalCoverID 255
 
 //Opportunist: +4 damage if the foe cannot counter.
 //By Tequila
@@ -588,7 +606,7 @@
 
 //Perfectionist: +15 Hit/Avoid when user's HP is at maximum.
 //By Zeta
-#define PerfectionistID 226
+#define PerfectionistID 255
 
 //Prescience: When initiating battle, Hit and Avo +15.
 //By Sme
@@ -620,17 +638,17 @@
 //By Snakey1
 #define BracingStanceID 246
 #define DartingStanceID 247
-#define FierceStanceID 255
+#define FierceStanceID 26
 #define KestrelStanceID 248
 #define MirrorStanceID 249
 #define ReadyStanceID 250
 #define SteadyStanceID 251
 #define SturdyStanceID 252
 #define SwiftStanceID 253
-#define WardingStanceID 254
-#define SpectrumStanceID 255
+#define WardingStanceID 224
+#define SpectrumStanceID 227
 //By Sme
-#define AlertStanceID 245
+#define AlertStanceID 255
 #define AlertStancePlusID 255
 
 //Thunderstorm: If weapon weight > enemy W. Weight, +2 dmg, +15% hit, +5% crit.
@@ -643,7 +661,7 @@
 
 //Tower Shield+: Take no damage against attacks recieved at range.
 //By Sme
-#define TowerShieldPlusID 180
+#define TowerShieldPlusID 255
 
 //Trample: +5 damage to unmounted units.
 //By Tequila
@@ -679,39 +697,39 @@
 
 //Double Lion: All weapons are treated as brave.
 //By Sme
-#define DoubleLionID 152
+#define DoubleLionID 255
 
 //Thighdeology: If a unit within 3 tiles has Nice Thighs, gain +2 Attack and +20 Hit.
 //By Sme
-#define ThighdeologyID 187
+#define ThighdeologyID 255
 
 //Thotslayer: +15 crit against units with Nice Thighs or Personality.
 //By Sme
-#define ThotslayerID 188
+#define ThotslayerID 255
 
 //Heavy Blade: +4 Damage/-2 Attack Speed when unit’s Con. is bigger than the enemy.
 //By Mikey Seregon
-#define HeavyBladeID 255
+#define HeavyBladeID 129
 
 //Dancing Blade: +4 Attack Speed/-2 Damage when unit’s Con. is lower than the enemy.
 //By Mikey Seregon
-#define DancingBladeID 255
+#define DancingBladeID 130
 
 //Fire Boost: Grants +6 Attack if unit's current HP is at least 3 higher than the enemy's.
 //By Mikey Seregon
-#define FireBoostID 255
+#define FireBoostID 90
 
 //Wind Boost: Grants +6 Attack Speed if unit's current HP is at least 3 higher than the enemy's.
 //By Mikey Seregon
-#define WindBoostID 255
+#define WindBoostID 91
 
 //Earth Boost: Grants +6 Defense if unit's current HP is at least 3 higher than the enemy's.
 //By Mikey Seregon
-#define EarthBoostID 255
+#define EarthBoostID 92
 
 //Water Boost: Grants +6 Resistance if unit's current HP is at least 3 higher than the enemy's.
 //By Mikey Seregon
-#define WaterBoostID 255
+#define WaterBoostID 93
 
 //Air Raid: Grants +5 or +15 on a stat when on a tile enemy cannot enter
 //By Jopettajah
@@ -725,7 +743,7 @@
 
 //Chaos Style: AS +3 during combat with a physical weapon against a foe armed with magic or vice versa.
 //By Jopettajah
-#define ChaosStyleID 255
+#define ChaosStyleID 53
 
 //Dragonskin: Halve damage taken
 //By Jopettajah
@@ -734,7 +752,7 @@
 
 //Stunning Smile: If foe is male, inflicts Avo-20 on that foe during combat.
 //By Jopettajah
-#define StunningSmileID 255
+#define StunningSmileID 119
 
 // Keen Fighter: Unit takes 75% damage if the opponent can double. 
 // By Vesly 
@@ -746,11 +764,11 @@
 
 // Multiscale: Take half damage when at full HP.
 // By Vesly 
-#define MultiscaleID 255
+#define MultiscaleID 123
 
 // Flank: If an ally is on the opposite side of an adjacent target, deal 25% more damage.
 // By Vesly 
-#define FlankID 255 
+#define FlankID 7
 
 //Swarm: If an adjacent target is surrounded, deal 50% more damage.
 // By Vesly 
@@ -758,8 +776,35 @@
 
 //Lady Blade: If the unit is female, double weapon might
 //By Snerdels
-#define LadyBladeID 255
+#define LadyBladeID 45
 
+//Range Accuracy: Reduces hit at long range
+// By Snerdels
+#define RangeAccuracyID 255
+
+//Range Accuracy Negate
+// By Snerdels
+#define RangeAccuracyNegateID 255
+
+//Saunion
+// By Snerdels
+#define SaunionID 255
+
+//CarefulAim: +30 hit if the user initiates combat without moving
+//By Jester
+#define CarefulAimID 255
+
+//Stalwart: This unit is immune to status effects
+//By Jester
+#define StalwartID 255
+
+//WeaponInsight: Add 20 crit if the user's equipped weapon has a higher rank than the enemy's
+//By Jester
+#define WeaponInsightID 48
+
+//FairFight: Add 20 hit to both sides
+//By Jester
+#define FairFightID 47
 
 
 //Proc Skills
@@ -790,11 +835,11 @@
 
 //Barricade+: In combat, damage recieved equals half of the damage when struck last.
 //By Snakey1
-#define BarricadePlusID 24
+#define BarricadePlusID 255
 
 //Black Magic: Skill% chance to inflict a random status.
 //By Tequila
-#define BlackMagicID 39
+#define BlackMagicID 255
 
 //Colossus: Triples Strength. (Skill % activation)
 //Author Unknown (Initial Commit)
@@ -815,7 +860,7 @@
 
 //Deadeye: Doubles hit rate. Skill% chance to inflict sleep.
 //By Sme
-#define DeadeyeID 42
+#define DeadeyeID 255
 
 //Devil's Luck: Immune to Devil Reversal. Gives unit's Devil Reversal to the enemy. (31-Luck % chance of Devil Reversal).
 //By Leonarth
@@ -834,11 +879,11 @@
 
 //Dragon Fang: 1.5x damage. (Skill% activation)
 //By Sme
-#define DragonFangID 33
+#define DragonFangID 255
 
 //Eclipse: Leave opponent with 1 HP. (Skill % activation)
 //By Sme
-#define EclipseID 21
+#define EclipseID 255
 
 //Enrage: Inflict berserk status. (Skill% activation)
 //By Sme
@@ -846,11 +891,11 @@
 
 //Flare: Halve enemy resistance. (Skill% activation)
 //By Sme
-#define FlareID 34
+#define FlareID 255
 
 //Foresight: Avoid the damage from enemy Critical Hits and Skill Activations.
 //By Leonarth
-#define ForesightID 26
+#define ForesightID 255
 
 //Ignis: Add Def/2 and Res/2 to damage dealt. (Skill % activation)
 //Author Unknown (Initial Commit)
@@ -874,7 +919,7 @@
 
 //Moonbow: Enemy Def/Res is reduced by 25%. Charge: 2
 //Author Unknown (Initial Commit)
-#define MoonbowID 37
+#define MoonbowID 255
 
 //Pavise: Nullify a physical attack. (Skill % activation)
 //Author Unknown (Initial Commit)
@@ -882,15 +927,19 @@
 
 //Petrify: Inflict stone status. (Skill% activation)
 //By Sme
-#define PetrifyID 41
+#define PetrifyID 255
 
 //Sol: Restore damage dealt as HP. (Skill % activation)
 //Author Unknown (Initial Commit)
 #define SolID 12
 
-//Solar Brace: When attacking, restore 25% of damage dealt as HP.
+//Solar Brace: Restore 25% of damage dealt as HP.
 //By Snerdels
-#define SolarBraceID 255
+#define SolarBraceID 147
+
+//Lunar Brace: Ignore 25% of enemy defense.
+//By Snerdels
+#define LunarBraceID 146
 
 //Sure Shot: A precision attack that always hits and does 1.5x damage. (Skill % activation)
 //Author Unknown (Initial Commit)
@@ -916,11 +965,11 @@
 
 //Bow Range +1: Maximum range of equipped bows is increased.
 //By Teraspark
-#define BowRangeUpID 136
+#define BowRangeUpID 255
 
 //Point Blank: Minimum range of equipped bows is set to 1.
 //By Teraspark
-#define PointBlankID 137
+#define PointBlankID 255
 
 //Staff Savant: Maximum range of staves is increased by 1.
 //By Teraspark
@@ -928,7 +977,7 @@
 
 //Tome Range +1: Maximum range of equipped tome is increased.
 //By Kirb
-#define TomeRangeUpID 135
+#define TomeRangeUpID 255
 
 //High Ground: Maximum range of all tomes and bows increased by 2 when on specified terrain.
 //By Snerdels
@@ -940,6 +989,10 @@
 //Armsthrift: Luck % chance to not consume weapon durability.
 //Author Unknown (Initial Commit)
 #define ArmsthriftID 138
+
+//Blessing: Guaranteed to not consume weapon durability.
+//By Snerdels
+#define BlessingID 255
 
 //Dazzle: Opponents cannot counterattack this unit.
 //By circleseverywhere
@@ -965,7 +1018,7 @@
 
 // Reckless Fighter: Both units in combat always double. 
 // By Vesly 
-#define RecklessFighterID 255
+#define RecklessFighterID 254
 
 
 //Wary Fighter: Unit cannot double or be doubled.
@@ -1004,13 +1057,13 @@
 
 //Defiant Skills: When HP is 25% or lower, gain +4 to the given stat.
 //By Sme
-#define DefiantStrID 255
-#define DefiantMagID 255
-#define DefiantSklID 255
-#define DefiantSpdID 255
-#define DefiantLckID 255
-#define DefiantDefID 255
-#define DefiantResID 255
+#define DefiantStrID 87
+#define DefiantMagID 88
+#define DefiantSklID 89
+#define DefiantSpdID 39
+#define DefiantLckID 42
+#define DefiantDefID 33
+#define DefiantResID 21
 
 //Resolve: When HP < 50%, gain 1.5x Str, Skl, & Spd.
 //By Sme
@@ -1018,11 +1071,11 @@
 
 //Fortress Defense: +5 Def, -3 Str/Mag
 //By Leonarth
-#define FortressDefenseID 255
+#define FortressDefenseID 151
 
 //Fortress Resistance: 5 Res, -3 Str/Mag
 //By Leonarth
-#define FortressResistanceID 255
+#define FortressResistanceID 155
 
 //Life and Death: Grants +5 Atk/Mag/Spd, -5 Def/Res.
 //By Leonarth
@@ -1030,12 +1083,12 @@
 
 //Push Skills: When HP is full, gain +5 to the given stat.
 //By Sme
-#define PushStrID 255
-#define PushMagID 255
-#define PushSklID 255
-#define PushSpdID 255
-#define PushDefID 255
-#define PushResID 255
+#define PushStrID 70
+#define PushMagID 71
+#define PushSklID 72
+#define PushSpdID 73
+#define PushDefID 74
+#define PushResID 75
 
 //Lull Skills: Negate the effects of a rally for the given stat.
 //By Sme
@@ -1055,28 +1108,24 @@
 // Author: Vesly 
 #define StrongConstitutionID 255
 
-//Speed Boost: Boost movement by +1 per turn up to 6 turns.
-//By Jester
-#define SpeedBoostID 155
-
 
 //Unit Menu Skills
 
 //Rally Skills: +4 to specified stat to allies within 2 tiles.
 //Author Unknown (Initial Commit)
-#define RallyStrID 70
-#define RallyMagID 71 //Requires Str/Mag Split
-#define RallySklID 72
-#define RallySpdID 73
-#define RallyLukID 76
-#define RallyDefID 74
-#define RallyResID 75
-#define RallyMovID 77
-#define RallySpectrumID 78
+#define RallyStrID 255
+#define RallyMagID 255 //Requires Str/Mag Split
+#define RallySklID 255
+#define RallySpdID 255
+#define RallyLukID 255
+#define RallyDefID 255
+#define RallyResID 255
+#define RallyMovID 255
+#define RallySpectrumID 255
 
 //Capture: Capture an enemy after defeating it with reduced stats.
 //By Tequila
-#define CaptureID 63
+#define CaptureID 255
 
 //Dance: Refresh an ally unit to let them act again.
 //By Sme
@@ -1084,15 +1133,15 @@
 
 //Gamble: A reckless attack with halved hit but doubled crit.
 //Author Unknown (Initial Commit)
-#define GambleID 60
+#define GambleID 255
 
 //Lunge: Swap places with the opponent after combat. (No effect if Move is --)
 //By Tequila
-#define LungeID 61
+#define LungeID 255
 
 //Mercy: Enemies are left with at least 1 HP.
 //By Tequila
-#define MercyID 62
+#define MercyID 255
 
 //Summon: Can conjure a phantom soldier to fight alongside you.
 //By Sme
@@ -1100,31 +1149,31 @@
 
 //Supply: This unit has access to the convoy.
 //By Sme
-#define SupplyID 59
+#define SupplyID 255
 
 //Shove: Allows unit to push other units one tile away.
 //By StanH
-#define ShoveID 64
+#define ShoveID 255
 
 //Smite: Allows unit to push other units two tiles away.
 //By StanH
-#define SmiteID 65
+#define SmiteID 255
 
 //Pivot: Allows unit to move to the opposite side of an adjacent ally.
 //By StanH
-#define PivotID 66
+#define PivotID 255
 
 //Reposition: Allows unit to pull an adjacent ally to its opposite side.
 //By StanH
-#define RepositionID 67
+#define RepositionID 255
 
 //Swap: Allows unit to swap positions with an adjacent ally.
 //By StanH
-#define SwapID 68
+#define SwapID 255
 
 //Swarp: Allows unit to swap positions with a distant ally.
 //Be Sme
-#define SwarpID 69 
+#define SwarpID 255 
 
 //Steal: Unit can steal items.
 //By Tequila
@@ -1161,7 +1210,7 @@
 
 //Discipline: Weapon experience gains are doubled.
 //Author Unknown (Initial Commit)
-#define DisciplineID 97
+#define DisciplineID 255
 
 //Vantage: If HP < 50%, strike first when attacked.
 //Author Unknown (Initial Commit)
@@ -1169,11 +1218,11 @@
 
 //Catch 'Em All: Grants the user every skill.
 //By Leonarth
-#define CatchEmAllID 151
+#define CatchEmAllID 255
 
 //Vantage+: User always attacks first, even if attacked. Negates crits.
 //By SD9k
-#define VantagePlusID 113
+#define VantagePlusID 255
 
 //Nihil: Cancels the opponent's skills in combat.
 //Author Unknown (Initial Commit)
@@ -1185,7 +1234,7 @@
 
 //Locktouch: Can open locks without keys or picks.
 //By Kao
-#define LockTouchID 5
+#define LockTouchID 255
 #define LocktouchID LockTouchID //Alias
 
 //Expertise: Reduce bonus damage from critical hits by 50%.
@@ -1198,7 +1247,7 @@
 
 //Dragon's Blood: Unit is able to activate Dragon Veins.
 //By Colorz
-#define DragonsBloodID 132
+#define DragonsBloodID 255
 
 //Hero: +30% skill activation rate when HP is below 50%.
 //By Sme
@@ -1245,7 +1294,11 @@
 
 //Discipline+: Weapon experience gains are doubled. Unit may S-Rank multiple weapon types.
 //By Zeta
-#define DisciplinePlusID 98
+#define DisciplinePlusID 255
+
+//Arms Master: Unit can S rank more than one weapon.
+// By Snerdels
+#define ArmsMasterID 255
 
 //Watchful: This unit cannot be captured or stolen from.
 //By Sme
@@ -1253,7 +1306,7 @@
 
 //Boon: Cure bad status effects at the beginning of each turn.
 //By Sme
-#define BoonID 95
+#define BoonID 255
 
 //Synchronize: Statuses are also applied to the attacker.
 //By Sme
@@ -1265,19 +1318,22 @@
 
 //Poise: +1 Move. Negates enemy hit bonus from weapon triangle advantage.
 //By Zeta
-#define PoiseID 144
+#define PoiseID 255
 
 //Amische: This unit's religion disallows them from using non-Iron weaponry.
 //By Sme
-#define AmischeID 131
+#define AmischeID 255
 
 //Triangle Attack: Allows this unit to perform a triangle attack with 2 other units who have this skill.
-#define TriangleAttackID 6
+#define TriangleAttackID 255
 
 // Shrewd Potential: Stat boosters provide +1 more than usual. 
 // Author: Vesly 
 #define ShrewdPotentialID 255
 
+//Nonconforming: Inverts the effects of the weapon triangle.
+//By Jester
+#define NonconformingID 6
 
 //Biorhythm Skills: Double or halve biorhythm effects.
 //By Sme
@@ -1295,3 +1351,58 @@
 //Broken Skills
 #define Roll12ID 255
 #define TraceID 255
+
+//Custom Skills
+
+#define StrongID 255
+
+//PhantomSentine Skills
+
+#define DefenderID 5
+#define DelivererID 255
+
+#define ConcentrationID 255
+#define DivineProtectionID 255
+#define VolantID 255
+
+#define AirSuperiorityID 41
+#define GambleFE14ID 136
+#define GuardID 137
+#define HeartseekerID 255
+
+//Mikey_Seregon Skills
+
+#define SalvageBlowID 76
+#define WitchsBrewID 255
+
+#define BushidoID 255
+#define CompetitiveID 255
+#define EvenhandedID 77
+#define FierceCounterID 255
+#define HuntersBoonID 34
+#define OddShapedID 78
+#define PhilandererID 255
+#define PrideID 255
+#define ProdigyID 255
+#define RivalryID 255
+#define UnmaskID 63
+
+#define BibliophileID 60
+#define BoldTurtleID 61
+#define EntropyID 255
+#define GracefulRiderID 255
+#define HunterID 255
+#define ShortFuseID 59
+#define UnderdogID 255
+#define WingedRiderID 255
+#define WiseTurtleID 62
+
+#define StrengthPlusID 172
+#define MagicPlusID 180
+#define SkillPlusID 152
+#define SpeedPlusID 187
+#define DefensePlusID 188
+#define ResistancePlusID 52
+#define HPPlusID 24
+#define LuckPlusID 37
+#define ConPlusID 144

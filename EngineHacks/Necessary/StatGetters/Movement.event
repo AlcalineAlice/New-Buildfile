@@ -4,9 +4,9 @@
 #include "_Common.event"
 ALIGN 4
 pMovModifiers: // Movement
-	POIN prAddUnitBaseMov prAddUnitMovBonus prGetItemMovBonus 
-	POIN prDebuffMov SpeedBoost
-	POIN prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prArmorMarchCheck
+	POIN prAddUnitBaseMov 
+	POIN prDebuffMov 
+	POIN prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prArmorMarchCheck prDelivererBonus 
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff
 	#endif
@@ -44,10 +44,8 @@ prNullifyIfFreeze:
 	rIfUnitHasStatus(0x9)
 		rConstant(0)
 
-ALIGN 4
-prAddEquipMov:
-	rAdd(rForUnitEquipped(rCallExternal(prGetItemMovBonus)))
-	#include "_asm/GetItemMovBonus.lyn.event"
+
+	
 
 ALIGN 4
 prItemPassiveMov:

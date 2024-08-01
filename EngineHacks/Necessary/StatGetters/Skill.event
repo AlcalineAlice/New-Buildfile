@@ -6,7 +6,7 @@
 pSkillModifiers: // Skill
 	POIN prAddUnitSkill prHalveIfRescuing prHalveIfCapturing 
 	POIN prDebuffSkl 
-	POIN prAddEquipSkill prItemPassiveSkl prRallySkl prResolve prDefiantSkl prPushSkl
+	POIN prItemPassiveSkl prRallySkl prResolve prDefiantSkl prPushSkl prDefenderBonus prSkillBonus 
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -15,8 +15,7 @@ WORD 0
 prAddUnitSkill:
 	rAdd(rSByteAt(UNIT_SKILL))
 
-prAddEquipSkill:
-	rAdd(rForUnitEquipped(rCallExternal(prGetItemSklBonus)))
+
 
 prItemPassiveSkl:
 #ifndef DONT_STACK_BOOSTS

@@ -6,17 +6,17 @@
 pDefenseModifiers: // Defense
 	POIN prAddUnitDefense prHalveIfCapturing 
 	POIN prDebuffDef StrongCon
-	POIN prAddEquipDefense prItemPassiveDefense prRallyDef prLifeAndDeathMinus VigorDanceCheck prSkillFury prFortressDefenseDef prDefiantDef prPushDef
+	POIN prItemPassiveDefense prRallyDef prLifeAndDeathMinus VigorDanceCheck prSkillFury prFortressDefenseDef prDefiantDef prPushDef
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
+	POIN prDefenderBonus prDefenseBonus 
 	#endif
 WORD 0
 
 prAddUnitDefense:
 	rAdd(rSByteAt(UNIT_DEFENSE))
 	
-prAddEquipDefense:
-	rAdd(rForUnitEquipped(rCallExternal(prGetItemDefBonus)))
+
 
 	
 prFortressDefenseDef:

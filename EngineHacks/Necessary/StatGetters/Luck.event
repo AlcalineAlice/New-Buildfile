@@ -6,7 +6,7 @@
 pLuckModifiers: // Luck
 	POIN prAddUnitLuck prHalveIfCapturing 
 	POIN prDebuffLuk 
-	POIN prAddEquipLuck prItemPassiveLuck prRallyLuk prDefiantLck
+	POIN prItemPassiveLuck prRallyLuk prDefiantLck prDefenderBonus prLuckBonus 
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -15,8 +15,7 @@ WORD 0
 prAddUnitLuck:
 	rAdd(rSByteAt(UNIT_LUCK))
 
-prAddEquipLuck:
-	rAdd(rForUnitEquipped(rCallExternal(prGetItemLckBonus)))
+
 
 
 prItemPassiveLuck:

@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pMaxHPModifiers: // Maximum HP
-	POIN prAddUnitMaxHP HalfHpFunc prAddEquipHP prItemPassiveHp
+	POIN prAddUnitMaxHP HalfHpFunc prItemPassiveHp prHPBonus
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -13,10 +13,8 @@ WORD 0
 prAddUnitMaxHP:
 	rAdd(rSByteAt(UNIT_MAXHP))
 
-prAddEquipHP:
-	rAdd(rForUnitEquipped(rCallExternal(prGetItemHPBonus)))
 
-
+	
 
 prItemPassiveHp:
 #ifndef DONT_STACK_BOOSTS
